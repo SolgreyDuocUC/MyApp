@@ -65,6 +65,8 @@ dependencies {
     // ViewModel + Compose (⬅️ cambio clave: coordenada directa con versión)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation(libs.androidx.room.common.jvm)
+    implementation(libs.androidx.room.ktx)
 
 
     // Tests

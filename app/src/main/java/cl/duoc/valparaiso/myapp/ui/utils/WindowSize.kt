@@ -1,5 +1,6 @@
 package cl.duoc.artesaniaapp.ui.utils
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
@@ -7,6 +8,7 @@ import androidx.window.layout.WindowMetricsCalculator
 
 enum class WindowWidth { Compact, Medium, Expanded }
 
+@SuppressLint("ContextCastToActivity")
 @Composable
 fun rememberWindowWidthClass(): WindowWidth {
     val activity = LocalContext.current as Activity
