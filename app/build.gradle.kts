@@ -43,30 +43,28 @@ android {
 }
 
 dependencies {
-    // Puedes seguir usando estos alias si existen en tu catalog
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
 
-    // Compose BOM (controla versiones de los artefactos Compose)
     implementation(platform(libs.androidx.compose.bom))
 
-    // Artefactos Compose cubiertos por el BOM (sin versión)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("io.coil-kt:coil-compose:2.7.0")
-    //implementation("io.coil-kt.coil3:coil-compose:3.3.0")
-    // Navigation Compose (coordenada directa)
     implementation("androidx.navigation:navigation-compose:2.8.1")
     implementation("androidx.window:window:1.3.0")
-    // ViewModel + Compose (⬅️ cambio clave: coordenada directa con versión)
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.1")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation(libs.androidx.room.common.jvm)
     implementation(libs.androidx.room.ktx)
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation(libs.firebase.appdistribution.gradle)
 
 
     // Tests
@@ -79,4 +77,6 @@ dependencies {
     // Debug
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
 }
